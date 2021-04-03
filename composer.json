@@ -1,0 +1,22 @@
+{
+    "name": "thiagobrauer/laravel-incremental-migrations",
+    "authors": [
+        {
+            "name": "Thiago Ribeiro",
+            "email": "thiagobrauer@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "ThiagoBrauer\\LaravelIncrementalMigrations\\": "src/"
+      }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "ThiagoBrauer\\LaravelIncrementalMigrations\\CustomMigrationServiceProvider"
+        ]
+      }
+    }
+}
