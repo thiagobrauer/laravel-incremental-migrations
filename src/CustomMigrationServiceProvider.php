@@ -1,0 +1,46 @@
+<?php
+
+namespace ThiagoBrauer\LaravelIncrementalMigrations;
+
+use ThiagoBrauer\LaravelIncrementalMigrations\CustomMigrateMakeCommand;
+use Illuminate\Database\MigrationServiceProvider;
+
+class CustomMigrationServiceProvider extends MigrationServiceProvider
+{
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        parent::register();
+
+        $this->app->when(MigrationCreator::class)
+            ->needs('$customStubPath')
+            ->give(function ($app) {
+                return $app->basePath('stubs');
+            });
+
+        $this->registerMigrateMakeCommand();
+    }
+
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
+    protected function registerMigrateMakeCommand()
+    {
+        $this->app->singleton('command.migrate.make', function ($app) {
+            // Once we have the migration creator registered, we will create the command
+            // and inject the creator. The creator is responsible for the actual file
+            // creation of the migrations, and may be extended by these developers.
+            $creator = $app['migration.creator'];
+
+            $composer = $app['composer'];
+
+            return new CustomMigrateMakeCommand($creator, $composer);
+        });
+    }
+}
