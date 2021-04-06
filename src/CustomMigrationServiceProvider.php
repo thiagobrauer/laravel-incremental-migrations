@@ -23,6 +23,12 @@ class CustomMigrationServiceProvider extends MigrationServiceProvider
             });
 
         $this->registerMigrateMakeCommand();
+
+        $this->app->singleton('command.incremental-migrations.fix', function($app) {
+          return new IncrementalMigrationsFixCommand;
+        });
+
+        $this->commands('command.incremental-migrations.fix');
     }
 
     /**
