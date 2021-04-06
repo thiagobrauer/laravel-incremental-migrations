@@ -6,4 +6,4 @@ Let's say you created a migration running `php artisan make:migration alter_user
 
 What this package does is add an incremental number to the end of the migration file, so the classnames will never be the same. If you run `php artisan make:migration alter_users_table` multiple times, you will get `*_alter_users_table.php`, `*_alter_users_table_2.php`, `*_alter_users_table_3.php` and so on.
 
-Laravel 8 now includes an ["squash"](https://laravel.com/docs/8.x/migrations#squashing-migrations ""squash"") feature. Take a look at it, cause it may be an alternative to using this package.
+Laravel 8 now includes an ["squash"](https://laravel.com/docs/8.x/migrations#squashing-migrations) feature. Take a look at it, cause it may be an alternative to using this package.
