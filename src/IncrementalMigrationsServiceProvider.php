@@ -3,7 +3,8 @@
 namespace ThiagoBrauer\LaravelIncrementalMigrations;
 
 use Illuminate\Database\MigrationServiceProvider;
-use ThiagoBrauer\LaravelIncrementalMigrations\CustomMigrateMakeCommand;
+use ThiagoBrauer\LaravelIncrementalMigrations\Commands\CustomMigrateMakeCommand;
+use ThiagoBrauer\LaravelIncrementalMigrations\Commands\IncrementalMigrationsFixCommand;
 
 class IncrementalMigrationsServiceProvider extends MigrationServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ThiagoBrauer\LaravelIncrementalMigrations;
+namespace ThiagoBrauer\LaravelIncrementalMigrations\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Console\Migrations\MigrateMakeCommand;
