@@ -3,9 +3,9 @@
 namespace ThiagoBrauer\LaravelIncrementalMigrations;
 
 use ThiagoBrauer\LaravelIncrementalMigrations\CustomMigrateMakeCommand;
-use Illuminate\Database\MigrationServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class CustomMigrationServiceProvider extends MigrationServiceProvider
+class IncrementalMigrationsServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
