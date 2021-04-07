@@ -1,5 +1,6 @@
 {
     "name": "thiagobrauer/laravel-incremental-migrations",
+    "description": "This Laravel package extends the command php artisan make:migration to add an incremental number at the end of a migration file, if there is already another migration with the same name. It also has its own artisan command to fix the names of the existing migrations.",
     "authors": [
         {
             "name": "Thiago Ribeiro",
