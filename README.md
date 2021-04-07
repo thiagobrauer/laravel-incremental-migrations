@@ -30,7 +30,7 @@ php artisan make:migration migration_name
 
 #### Fix existing migrations
 
-:warning: Not recommended for production
+:warning: Not recommended for projects already running in production
 
 ```
 php artisan incremental-migrations:fix
