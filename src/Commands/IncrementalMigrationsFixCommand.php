@@ -129,7 +129,9 @@ class IncrementalMigrationsFixCommand extends Command
     }
 
     /**
-     *
+     * @param string $migrationName
+     * @param int $index
+     * @return string
      */
     protected function getNewMigrationName($migrationName, $index) {
       $explode = explode('_', $migrationName);
@@ -145,7 +147,10 @@ class IncrementalMigrationsFixCommand extends Command
     }
 
     /**
-     *
+     * @param string $firstMigration
+     * @param string $migration
+     * @param string $index
+     * @return void
      */
     protected function renameMigration($firstMigration, $migration, $index) {
       $migrationName = $this->getMigrationName($migration);
@@ -197,7 +202,10 @@ class IncrementalMigrationsFixCommand extends Command
     }
 
     /**
-     * Check $migrationFiles if there is a migration with the given name.
+     * Check if $migrationFiles has another migration with the given name.
+     *
+     * @var array
+     * @return int|null
      */
     protected function findEqualName($migrationFiles, $name) {
       foreach ($migrationFiles as $key => $migration) {
