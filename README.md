@@ -37,3 +37,5 @@ php artisan incremental-migrations:fix
 This command will check all the existing migrations and rename them if there are duplicated ones.
 
 Laravel 8 now includes a ["squash"](https://laravel.com/docs/8.x/migrations#squashing-migrations) feature. Take a look at it, cause it may be an alternative to using this command.
+
+:warning: Not recommended for production
